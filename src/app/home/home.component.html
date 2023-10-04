@@ -1,0 +1,42 @@
+<div class="content" role="main">
+  <!-- Side List -->
+  <div class="title-list">
+    <div>  
+      <!-- Search Titles and Add Poem Button -->
+      <div class="form-search list-group-item">
+        <input [(ngModel)]="searchedTitle" type="search" name="searchTitle" class="form-control" placeholder="Search">
+        <button routerLink="/Poem edit" routerLinkActive="active" (click)="addNewPoem()" class="add-button"><img src="/assets/resource/add.svg"></button>
+      </div>
+    </div>      
+    
+    <!-- Matching Titles -->
+    <div *ngIf="searchedTitle" class="matching-titles">
+      <div class="list-group" *ngFor="let poem of (poemsList | namefilter: searchedTitle)">
+        <a (click)="onItemClick(poem)" routerLinkActive="active" routerLink=":{{poem.title}}" class="list-group-item" role="tab" [innerHTML]="poem.title | highlight: searchedTitle"></a>
+      </div>
+      <div class="list-group" *ngFor="let title of (searchedTitle | titlesearch)">
+        <a (click)="onTitleClick(title)" routerLinkActive="active" routerLink=":{{title}}" class="list-group-item" role="tab" [innerText]="title"></a>
+      </div>
+    </div>
+
+    <!-- Home href and Poems List -->
+    <div class="list-group">
+      <a *ngIf="!showPoem; else show" (click)="onHomeItemClick()" routerLinkActive='active' routerLink="" class="list-group-item" role="tab">Home</a>
+      <ng-template #show>
+        <a (click)="onHomeItemClick()" routerLinkActive='' routerLink="" class="list-group-item" role="tab">Home</a>
+      </ng-template>
+      <div class="group">
+        <a *ngFor="let poem of poemsList" (click)="onItemClick(poem)" routerLinkActive="active" routerLink=":{{poem.title}}" class="list-group-item" role="tab" [innerText]="poem.title"></a>
+      </div>
+      <div class="group">
+        <a *ngFor="let title of titlesList" (click)="onTitleClick(title)" routerLinkActive="active" routerLink=":{{title}}" class="list-group-item" role="tab" [innerText]="title"></a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Page Content (Poetry) -->
+  <div [ngSwitch]="showPoem" class="poetry">
+    <app-poem-carousel-view *ngSwitchCase="false" [poemsList]="poemsList" (goToPoem)="onGoToPoem($event)"></app-poem-carousel-view>
+    <app-poem-view *ngSwitchCase="true" [currentPoem]="selectedPoem" (removeAction)="onRemoveAction(selectedPoem)"></app-poem-view>
+  </div>
+</div>

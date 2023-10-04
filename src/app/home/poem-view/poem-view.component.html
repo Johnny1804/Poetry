@@ -1,0 +1,10 @@
+<div *ngIf="currentPoem.title != '' && currentPoem.title != '' && currentPoem.title != ''; else error" class="tab-pane">
+    <span class="poetry-title" [innerText]="currentPoem.title"></span>
+    <span class="poetry-author" [innerText]="currentPoem.author"></span>
+    <pre class="poetry-content" [innerText]="currentPoem.text | row"></pre>  
+    <button *ngIf="currentPoem.isEditable" (click)="editPoem()" routerLink="/Poem edit" routerLinkActive="active" class="btn btn-outline-success">Edit</button>
+    <button *ngIf="currentPoem.isEditable" (click)="removePoem()" routerLink="/Home" routerLinkActive="active" class="btn btn-outline-success">Remove</button>
+</div>
+<ng-template #error>
+    <app-not-found></app-not-found>
+</ng-template>

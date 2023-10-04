@@ -1,0 +1,42 @@
+.tab-pane {
+  display: flex;
+  flex-direction: column;
+}
+
+.poetry-title {
+  font-family: Times New Roman;
+  font-style: italic;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+  
+.poetry-author {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+  
+.poetry-content {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Times New Roman;
+  font-style: italic;
+  padding-left: 1rem;
+  white-space: pre-line;
+}
+
+.active .button-parent .btn {
+  background-color: aquamarine;
+}
+
+.btn {
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}

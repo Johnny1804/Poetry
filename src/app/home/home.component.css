@@ -1,0 +1,78 @@
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.title-list {
+    width: min-content;
+}
+
+.poetry {
+    margin: 0.5rem auto;
+    width: fit-content;
+    height: auto;
+}
+
+.form-search {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 8px 5px 0;
+    border-radius: 5px !important;
+    margin-bottom: 5px;
+}
+
+.form-search .form-control {
+    margin: auto 8px;
+}
+
+.add-button {
+    border-radius: 50%;
+    border: #c0c0c0 1.7px solid;
+    background: transparent;
+    
+}
+  
+.add-button:hover {
+    background: rgb(0 0 0 / 8%);
+}
+  
+.add-button img {
+    margin: 0;
+    padding: 0;
+}
+
+/*review form set size and 
+
+.list-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+  max-height: 50rem;
+  overflow: scroll;
+
+}
+
+*/
+
+.list-group-item {
+    background: rgba(255, 255, 255, 0.5);
+
+    max-width: 40ch;
+    min-width: 20ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.matching-titles {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: #03519f 1px solid;
+}

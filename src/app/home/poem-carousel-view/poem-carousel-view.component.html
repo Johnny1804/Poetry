@@ -1,0 +1,15 @@
+<div class="tab-pane">
+    <div class="poems-view">
+      <div *ngFor="let poem of poemsList" class="poem-card">
+          <span class="poetry-title">{{poem.title}}</span>
+          <span class="poetry-author">{{poem.author}}</span>
+          <span class="poetry-content">
+            <div innerText="{{poem.text[0]+'\n'}}"></div>
+            <div *ngIf="poem.text[1] != undefined" innerText="{{poem.text[1]+'\n'}}"></div>
+            <div *ngIf="poem.text[2] != undefined" innerText="{{poem.text[2]+'\n'}}"></div>
+            <div *ngIf="poem.text[3] != undefined" innerText="{{poem.text[3]+'\n'}}"></div>
+            <button class="home_..." (click)="homeContinuePoetry(poem)">...</button>
+          </span>
+      </div>
+    </div>      
+</div>

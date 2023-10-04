@@ -1,0 +1,62 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.tab-pane {
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-pane input {
+    margin-bottom: 10px;
+}
+
+.poetry-title {
+    width: 20rem;
+
+    font-family: Times New Roman;
+    font-style: italic;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.poetry-author {
+    width: 25rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.poetry-content {
+    width: 20rem;
+    height: 30rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Times New Roman;
+    font-style: italic;
+    padding-left: 1rem;
+    white-space: pre-line;
+}
+
+.btn {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

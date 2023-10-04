@@ -1,0 +1,24 @@
+
+.notfound {
+}
+
+.notfound .notfound-404 {
+}
+
+.notfound .notfound-404 h1 {
+    font-family: montserrat,sans-serif;
+    font-size: 224px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: -1px -1px 0 #006eff,1px 1px 0 #00bfff;
+}
+
+.notfound .notfound-404 h2 {
+    font-family: montserrat,sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: rgb(235, 226, 226);
+    text-transform: uppercase;
+    text-shadow: 0 2px 0 #006eff;
+    letter-spacing: 5px;
+}

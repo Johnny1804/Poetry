@@ -1,0 +1,8 @@
+<div class="content">
+    <div class="tab-pane">
+        <input [(ngModel)]="selectedPoem.title" name="title" placeholder="Title" class="poetry-title">
+        <input [(ngModel)]="selectedPoem.author" name="author" placeholder="Author" class="poetry-author">
+        <textarea [(ngModel)]="text" name="text" placeholder="Text - Example: Lorem ipsum\nLoremipsum" class="poetry-content"></textarea>
+    </div>
+    <button (click)="saveEditedPoem()" routerLink="/Home" routerLinkActive="active" class="btn btn-outline-success">Save</button>
+</div>

@@ -1,0 +1,87 @@
+
+.poem-card>span, .poem-card>span>div {
+  max-width: 20ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.poetry-title, .poetry-author, .poetry-content {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.poetry-title {
+  font-family: Times New Roman;
+  font-style: italic;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.poetry-author {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+.poetry-content {
+  font-family: Times New Roman;
+  font-style: italic;
+  padding-left: 1rem;
+  white-space: pre-line;
+}
+
+button.home_\.\.\. {
+  border-radius: 25%;
+  background: transparent;
+  border: #d8d4d4 1px solid;
+}
+
+button.home_\.\.\.:hover {
+  background: #e6e3e3;
+}
+
+//trebuie luata o decizie
+
+@keyframes display {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  31% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+.poem-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.poem-card {
+  padding: 10px;
+  border-radius: 5%;
+  background-color: aliceblue;
+  //opacity: 0;
+  animation: display 8s infinite ;
+}
+//trebuie umblat
+
+// @for $i from 1 to 3 {
+//   .poem-card:nth-child(#{$i}) {
+//     animation-delay: #{$i * 2}s;
+//   }
+// } 
